@@ -112,10 +112,10 @@ public class ReflectExerciseDemo {
     private <T> String transferFields(T t) {
         return Arrays.stream(t.getClass().getDeclaredFields())
                 .filter(item -> item.isAnnotationPresent(TransferETC.class))
-                .map(item -> {
+                .map(field -> {
                     try {
-                        item.setAccessible(true);
-                        return String.format("%s：%s", item.getAnnotation(TransferETC.class).name(), item.get(t));
+                        field.setAccessible(true);
+                        return String.format("%s：%s", field.getAnnotation(TransferETC.class).name(), field.get(t));
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                         throw new RuntimeException(e);
