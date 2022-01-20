@@ -12,6 +12,7 @@ import java.util.Objects;
 
 /**
  * @author vincent
+ * <p>
  * 补充断言比较两个集合是否相同
  */
 public class AssertEqualsUtils {
