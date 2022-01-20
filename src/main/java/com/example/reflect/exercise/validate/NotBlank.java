@@ -9,5 +9,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotBlank {
     String message() default "";
+
     IntegrationResultCode resultCode() default IntegrationResultCode.UNKNOWN;
 }

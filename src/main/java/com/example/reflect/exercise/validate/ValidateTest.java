@@ -21,7 +21,7 @@ public class ValidateTest {
     }
 
     @Test
-    public void t2(){
+    public void t2() {
         InvoiceRequestQueryApiDto queryApiDto = new InvoiceRequestQueryApiDto();
         InvoiceRequestQueryApiDto.Orders orders = new InvoiceRequestQueryApiDto.Orders();
         queryApiDto.setOrders(Lists.newArrayList(orders));

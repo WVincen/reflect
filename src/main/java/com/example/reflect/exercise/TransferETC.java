@@ -9,5 +9,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TransferETC {
     String name();
+
     boolean required() default true;
 }
